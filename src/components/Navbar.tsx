@@ -67,7 +67,7 @@ const navItem: NavItem[] = [
     link: "#",
   },
   {
-    label: "Content",
+    label: "Contact",
     link: "#",
   },
   {
@@ -152,7 +152,7 @@ function MobileNav({ toggleSideMenu }: { toggleSideMenu: () => void }) {
             onClick={toggleSideMenu}
           />
         </section>
-        <div className="flex flex-col text-sm ">
+        <div className="flex flex-col text-base ">
           {navItem.map((data, index) => (
             <SingleNavItem
               key={index}
@@ -177,7 +177,7 @@ function SingleNavItem(data: NavItem) {
   };
 
   return (
-    <ul className="relative transition-all  py-2" ref={animationParent}>
+    <ul className="relative transition-all py-4" ref={animationParent}>
       <li
         className="flex cursor-pointer items-center group-hover:text-zinc-950 gap-2 dark:text-[#FAFAFA99] text-[#09090B99] dark:hover:text-[#FAFAFA] pl-4"
         onClick={toggleItem}

@@ -2,6 +2,8 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+import { RiDoubleQuotesL } from "react-icons/ri";
+import { RiDoubleQuotesR } from "react-icons/ri";
 
 export const InfiniteMovingCards = ({
   items,
@@ -11,7 +13,9 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
+    para: string;
     name: string;
+    subname: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -63,37 +67,45 @@ export const InfiniteMovingCards = ({
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty("--animation-duration", "100s");
       }
     }
   };
   return (
     <div ref={containerRef} className={cn("", className)}>
       <ul
-        ref={scrollerRef}
-        className={cn(
-          " flex min-w-full shrink-0 py-5 w-max border-zinc-200 dark:border-white/10 border-t border-b bg-[#FFFEFB] dark:bg-zinc-950 ",
-          start && "animate-scroll ",
-          pauseOnHover && "hover:[animation-play-state:paused]"
-        )}
-      >
-        {items.map((item, idx) => (
-          <li
-            className="w-[350px] max-w-full border-r-2 border-black/10 dark:border-white/10 flex-shrink-0 md:w-[400px]"
-            key={item.name}
-          >
-            <blockquote>
-              <div className="relative z-20  flex justify-center items-center ">
-                <span className="flex justify-center items-center">
-                  <span className=" text-sm text-center text-zinc-500 dark:text-neutral-400 font-normal">
-                    {item.name}
-                  </span>
-                </span>
-              </div>
-            </blockquote>
-          </li>
-        ))}
-      </ul>
+  ref={scrollerRef}
+  className={cn(
+    "flex min-w-full gap-5 shrink-0 w-max border-zinc-200 dark:border-white/10 bg-[#FFFEFB] dark:bg-zinc-950",
+    start && "animate-scroll",
+    pauseOnHover && "hover:[animation-play-state:paused]"
+  )}
+>
+  {items.map((item, idx) => (
+    <li
+      className="w-[250px] max-w-full border border-black/10 dark:border-white/10 flex-shrink-0 md:w-[310px] rounded-lg shadow-sm"
+      key={item.name}
+      style={{ height: 'auto' }} // Set height to 'auto'
+    >
+      <blockquote>
+        <div className="relative z-20 flex justify-center items-center">
+          <div className="flex justify-center flex-col p-5">
+            <span className="text-sm leading-[1.6] text-zinc-500 dark:text-neutral-300 font-normal border-b pb-3">
+              {item.para}
+            </span>
+            <span className="text-sm pt-3 mt-auto text-zinc-900 dark:text-indigo-500 font-normal">
+              {item.name}
+            </span>
+            <span className="text-sm leading-[1.6] text-zinc-400 dark:text-neutral-500 font-normal">
+              {item.subname}
+            </span>
+          </div>
+        </div>
+      </blockquote>
+    </li>
+  ))}
+</ul>
+
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
   return (
-    <div className="flex absolute items-center justify-center z-50 ">
+    <div className="flex absolute items-center justify-center z-20 mt-20 lg:mt-36 ">
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
