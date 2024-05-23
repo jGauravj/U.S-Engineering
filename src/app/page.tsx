@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "@/components/Hero";
-import { InfiniteMovingCardsDemo } from "@/components/InfiniteMovingCards";
 import Offer from "@/components/Offer";
 import { Testimonials } from "@/components/Testimonials";
 const page = () => {
