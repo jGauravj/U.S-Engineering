@@ -8,10 +8,8 @@ const page = () => {
     <div className="h-screen overflow-x-hidden w-full flex justify-center relative bg-[#FFFEFB] dark:bg-zinc-950">
       <div className="lg:mx-36 md:mx-10 mx-5">
         <Hero />
-        {/* <InfiniteMovingCardsDemo /> */}
         <Offer />
         <Testimonials />
-     
       </div>
     </div>
   );

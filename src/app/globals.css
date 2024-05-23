@@ -75,6 +75,15 @@
   }
 }
 
+@media (min-width: 640px) {
+  .custom-grid:nth-child(5) {
+    border-bottom: none;
+  }
+  .custom-grid:nth-child(6) {
+    border-bottom: none;
+  }
+}
+
 @media (min-width: 1024px) {
   .custom-grid:nth-child(3) {
     border-right: none;

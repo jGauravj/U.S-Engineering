@@ -57,7 +57,7 @@ const Offer = () => {
   ];
 
   return (
-    <div className="flex flex-col mt-[14rem] lg:mt-[16rem] gap-10 sm:gap-20 ">
+    <div className="flex flex-col mt-[7rem] lg:mt-[16rem] gap-16 sm:gap-20 ">
       <div className="text-center">
         <h1 className="lg:text-6xl md:text-5xl text-5xl sm:4xl dark:text-neutral-100 text-zinc-900">What We Offer</h1>
       </div>
