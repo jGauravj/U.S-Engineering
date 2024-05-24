@@ -6,23 +6,25 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className=" bg-slate-300  py-6">
+    <div className=" border-t border  pt-10 pb-3">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:mx-36 md:mx-10 mx-5 md:place-items-center">
         <div className="flex w-full justify-start gap-5 flex-col items-start ">
           <div className="flex items-center gap-2">
             <div>
               <Image src={logo} alt="logo" width={40} height={40} />
             </div>
-            <h1 className="text-2xl font-medium">U.S Engineering</h1>
+            <h1 className="text-2xl font-medium dark:text-neutral-100 text-zinc-900">
+              U.S Engineering
+            </h1>
           </div>
           <div className="flex md:w-1/2 ">
-            <p className="text-base">
+            <p className="text-base text-zinc-600 dark:text-neutral-300">
               Innovative designs and quality equipment for modern hospitals.
             </p>
           </div>
         </div>
         <div className="flex flex-col gap-8 items-end w-full">
-          <button className="flex mr-[4.5rem] justify-start items-center gap-2 px-8 py-3 border rounded-lg border-black/10">
+          <button className="flex dark:text-neutral-100 text-zinc-900 mr-[4.5rem] justify-start items-center gap-2 px-8 py-3 border rounded-lg border-black/10 dark:border-white/10">
             <span>
               <FaRegEnvelope />
             </span>
@@ -30,16 +32,16 @@ const Footer = () => {
           </button>
           <div className="flex">
             <ul className="flex gap-10 text-base ">
-              <li className=" cursor-pointer hover:-translate-y-1 transition-all">
+              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-600 dark:text-neutral-300 dark:hover:text-white hover:text-black">
                 Products
               </li>
-              <li className=" cursor-pointer hover:-translate-y-1 transition-all">
+              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-600 dark:text-neutral-300 dark:hover:text-white hover:text-black">
                 About
               </li>
-              <li className=" cursor-pointer hover:-translate-y-1 transition-all">
+              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-600 dark:text-neutral-300 dark:hover:text-white hover:text-black">
                 Contact
               </li>
-              <li className=" cursor-pointer hover:-translate-y-1 transition-all">
+              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-600 dark:text-neutral-300 dark:hover:text-white hover:text-black">
                 Career
               </li>
             </ul>
@@ -47,8 +49,10 @@ const Footer = () => {
         </div>
       </div>
       <div className="lg:mx-36 md:mx-10 mx-5 flex justify-between items-center mt-5">
-        <p className="text-xs">© 2024 US Engineering. All Rights Reserved.</p>
-        <p className="text-xs">
+        <p className="text-xs dark:text-neutral-400 text-zinc-900">
+          © 2024 US Engineering. All Rights Reserved.
+        </p>
+        <p className="text-xs dark:text-neutral-400 text-zinc-900">
           <Link href="https://gauravjangir.vercel.app/">
             Designed by Gaurav Jangir
           </Link>
