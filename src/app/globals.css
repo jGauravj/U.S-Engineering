@@ -66,12 +66,22 @@
   }
 }
 
+/* body {
+  overflow-y: scroll!important;
+} */
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@media (min-width: 540px) {
+  .hero-content{
+    margin-top: 24rem;
   }
 }
 
@@ -98,5 +108,4 @@
   .custom-grid:nth-child(5) {
     border-bottom: none;
   }
- 
 }

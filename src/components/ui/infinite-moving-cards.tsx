@@ -2,8 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import { TestimonialItem } from "../types";
-
 
 export const InfiniteMovingCards = ({
   items,
@@ -12,7 +10,11 @@ export const InfiniteMovingCards = ({
   pauseOnHover = true,
   className,
 }: {
-  items: TestimonialItem[];
+  items: {
+    quote: string;
+    name: string;
+    title: string;
+  }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
@@ -63,45 +65,53 @@ export const InfiniteMovingCards = ({
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "100s");
+        containerRef.current.style.setProperty("--animation-duration", "90s");
       }
     }
   };
   return (
-    <div ref={containerRef} className={cn("", className)}>
-      <ul
-  ref={scrollerRef}
-  className={cn(
-    "flex min-w-full gap-5 shrink-0 w-max border-zinc-200 dark:border-white/10 bg-[#FFFEFB] dark:bg-zinc-950",
-    start && "animate-scroll",
-    pauseOnHover && "hover:[animation-play-state:paused]"
-  )}
->
-  {items.map((item, idx) => (
-    <li
-      className="w-[250px] max-w-full border border-black/10 dark:border-white/10 flex-shrink-0 md:w-[310px] rounded-lg shadow-sm"
-      key={item.name}
-      style={{ height: 'auto' }} // Set height to 'auto'
+    <div
+      ref={containerRef}
+      className={cn(
+        "scroller relative z-20 w-full overflow-hidden",
+        className
+      )}
     >
-      <blockquote>
-        <div className="relative z-20 flex justify-center items-center">
-          <div className="flex justify-center flex-col p-5">
-            <span className="text-sm leading-[1.6] text-zinc-500 dark:text-neutral-300 font-normal border-b pb-3">
-              {item.para}
-            </span>
-            <span className="text-sm pt-3 mt-auto text-zinc-900 dark:text-indigo-500 font-normal">
-              {item.name}
-            </span>
-            <span className="text-sm leading-[1.6] text-zinc-400 dark:text-neutral-500 font-normal">
-              {item.subname}
-            </span>
-          </div>
-        </div>
-      </blockquote>
-    </li>
-  ))}
-</ul>
-
+      <ul
+        ref={scrollerRef}
+        className={cn(
+          " flex min-w-full shrink-0 gap-4  w-max flex-nowrap",
+          start && "animate-scroll ",
+          pauseOnHover && "hover:[animation-play-state:paused]"
+        )}
+      >
+        {items.map((item, idx) => (
+          <li
+            className="w-[300px] max-w-full relative rounded-xl border  flex-shrink-0 border-black/10 dark:border-white/10 p-6 md:w-[400px] shadow-sm"
+            style={{
+              background:
+                "bg-[#FFFEFB] dark:bg-zinc-950",
+            }}
+            key={item.name}
+          >
+            <blockquote>
+              <span className=" relative z-20 text-sm leading-[1.6] text-zinc-500 dark:text-neutral-300 font-normal">
+                {item.quote}
+              </span>
+              <div className="relative z-20 mt-6 flex flex-row items-center ">
+                <span className="flex flex-col">
+                  <span className=" text-sm leading-[1.6]text-zinc-900 dark:text-indigo-500 font-normal">
+                    {item.name}
+                  </span>
+                  <span className=" text-sm leading-[1.6] text-zinc-400 dark:text-neutral-500 font-normal">
+                    {item.title}
+                  </span>
+                </span>
+              </div>
+            </blockquote>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
