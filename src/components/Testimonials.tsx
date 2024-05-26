@@ -13,21 +13,21 @@ export function InfiniteMovingCardsDemo() {
           with U.S. Engineering in enhancing their hospital environments.
         </p>
       </div>
-      <div className=" mt-8 rounded-md flex flex-col  bg-[#FFFEFB] dark:bg-zinc-950 dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <div className=" mt-8 rounded-md flex flex-col  bg-[#FFFEFB] dark:bg-zinc-950  items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
           items={testimonials[0]}
           direction="right"
           speed="slow"
         />
       </div>
-      <div className=" rounded-md flex flex-col  bg-[#FFFEFB] dark:bg-zinc-950 dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <div className=" rounded-md flex flex-col  bg-[#FFFEFB] dark:bg-zinc-950  items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
           items={testimonials[1]}
           direction="left"
           speed="slow"
         />
       </div>
-      <div className=" rounded-md flex flex-col  bg-[#FFFEFB] dark:bg-zinc-950 dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <div className=" rounded-md flex flex-col  bg-[#FFFEFB] dark:bg-zinc-950  items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
           items={testimonials[2]}
           direction="right"
