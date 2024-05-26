@@ -18,13 +18,13 @@ const Footer = () => {
             </h1>
           </div>
           <div className="flex md:w-1/2 ">
-            <p className="text-base text-zinc-600 dark:text-neutral-300">
+            <p className="text-base text-zinc-600 dark:text-neutral-400">
               Innovative designs and quality equipment for modern hospitals.
             </p>
           </div>
         </div>
         <div className="flex flex-col gap-8 items-end w-full">
-          <button className="flex dark:text-neutral-100 text-zinc-900 mr-[4.5rem] justify-start items-center gap-2 px-8 py-3 border rounded-lg border-black/10 dark:border-white/10">
+          <button className="flex dark:text-neutral-300 text-zinc-900 mr-[4.5rem] justify-start items-center gap-2 px-8 py-3 border rounded-lg border-black/10 dark:border-white/10">
             <span>
               <FaRegEnvelope />
             </span>
@@ -32,16 +32,16 @@ const Footer = () => {
           </button>
           <div className="flex">
             <ul className="flex gap-10 text-base ">
-              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-600 dark:text-neutral-300 dark:hover:text-white hover:text-black">
+              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black font-normal">
                 Products
               </li>
-              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-600 dark:text-neutral-300 dark:hover:text-white hover:text-black">
+              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black">
                 About
               </li>
-              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-600 dark:text-neutral-300 dark:hover:text-white hover:text-black">
+              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black ">
                 Contact
               </li>
-              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-600 dark:text-neutral-300 dark:hover:text-white hover:text-black">
+              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black">
                 Career
               </li>
             </ul>

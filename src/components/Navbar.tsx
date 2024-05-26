@@ -20,7 +20,7 @@ type NavItem = {
 const navItem: NavItem[] = [
   {
     label: "Products",
-    link: "#",
+    link: "/products",
     children: [
       {
         label: "Todo list",
@@ -84,7 +84,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="z-40 fixed mx-auto flex justify-center left-0 right-0 items-center border-b border-black/5 backdrop-blur-md md:py-2 py-4 bg-white/10 dark:bg-zinc-950/10 dark:border-white/5">
+    <nav className=" z-50  fixed mx-auto flex justify-center top-0 left-0 right-0 items-center border-b border-black/5 backdrop-blur-md md:py-2 py-4 bg-white/10 dark:bg-zinc-950/10 dark:border-white/5">
       <div
         ref={animationParent}
         className="w-full lg:mx-36 md:mx-10 mx-5 flex justify-between items-center "
