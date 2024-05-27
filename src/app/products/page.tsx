@@ -4,16 +4,14 @@ import icu from "../../../public/icu-ward-work.jpg";
 import modularOT from "../../../public/modular-ot.jpg";
 import psa from "../../../public/psa-oxigen.jpeg";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-const productsItem = () => {
-  type Product = {
-    image: string;
-    name: string;
-    description: string;
-    button: string;
-    icon: JSX.Element;
-  };
+type Product = {
+  image: StaticImageData;
+  name: string;
+  description: string;
+  button: string;
+  icon: JSX.Element;
 };
 
 const products: Product[] = [
