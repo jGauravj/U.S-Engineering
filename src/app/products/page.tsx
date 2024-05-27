@@ -61,7 +61,7 @@ const page = () => {
               key={index}
               className="border dark:border-white/10 border-black/10 rounded-xl p-6 h-full bg-zinc-950"
             >
-              <div className="w-full lg:h-[13rem] md:h-[11rem] object-fill ">
+              <div className="w-full h-[12rem] lg:h-[13rem] md:h-[11rem]  object-contain ">
                 <Image
                   src={product.image}
                   alt="mgps"
