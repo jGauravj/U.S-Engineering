@@ -23,19 +23,31 @@ const navItem: NavItem[] = [
     link: "/products",
     children: [
       {
-        label: "Todo list",
+        label: "Medical Gas Pipeline System",
         link: "#",
       },
       {
-        label: "Gas piple",
+        label: "I.C.U, C.C.U, Ward Work",
         link: "#",
       },
       {
-        label: "OPD",
+        label: "Modualr Operation Theater",
         link: "#",
       },
       {
-        label: "Much more",
+        label: "PSA Oxygen Generation Plant",
+        link: "#",
+      },
+      {
+        label: "Nurse Call System",
+        link: "#",
+      },
+      {
+        label: "Interior Work",
+        link: "#",
+      },
+      {
+        label: "Hospital Furniture",
         link: "#",
       },
     ],
@@ -90,7 +102,9 @@ const Navbar = () => {
         className="w-full lg:mx-36 md:mx-10 mx-5 flex justify-between items-center "
       >
         <div>
-          <h1 className=" text-base font-medium text-zinc-950 dark:text-[#FAFAFA]">U.S. Engineering</h1>
+          <h1 className=" text-base font-medium text-zinc-950 dark:text-[#FAFAFA]">
+            U.S. Engineering
+          </h1>
         </div>
 
         {/* movile */}
@@ -98,7 +112,10 @@ const Navbar = () => {
 
         <div className="md:flex gap-10 items-center text-sm hidden md ">
           {navItem.map((data, index) => (
-            <ul key={index} className="group relative transition-all duration-300  py-3">
+            <ul
+              key={index}
+              className="group relative transition-all duration-300  py-3"
+            >
               <li className="flex cursor-pointer items-center group-hover:text-zinc-950 dark:group-hover:text-[#FAFAFA] gap-2 dark:text-[#FAFAFA99] text-[#09090B99] font-normal">
                 <Link href={data.link ?? "#"}>
                   <span className=" ">{data.label}</span>
@@ -114,7 +131,7 @@ const Navbar = () => {
                   {data.children.map((ch, index) => (
                     <p
                       key={index}
-                      className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-[#09090B99] dark:text-[#FAFAFA99] dark:hover:text-[#FAFAFA] hover:text-zinc-950"
+                      className="flex cursor-pointer items-center py-2 px-7 text-[#09090B99] dark:text-[#FAFAFA99] dark:hover:text-[#FAFAFA] hover:text-zinc-950"
                     >
                       <Link href={ch.link ?? "#"}>
                         <span className=" whitespace-nowrap pl-3">
@@ -144,7 +161,7 @@ export default Navbar;
 function MobileNav({ toggleSideMenu }: { toggleSideMenu: () => void }) {
   return (
     <div className="fixed left-0 top-0 flex h-full min-h-screen w-full justify-end bg-black/80 md:hidden">
-      <div className=" h-full w-[65%] bg-[#FFFEFB] dark:bg-zinc-950 px-4 py-4">
+      <div className=" h-full w-[85%] sm:w-[65%] bg-[#FFFEFB] dark:bg-zinc-950 px-4 py-4">
         <section className="flex justify-end items-center gap-5">
           <ModeToggle />
           <MdClose
@@ -194,11 +211,11 @@ function SingleNavItem(data: NavItem) {
       </li>
 
       {isItemOpen && data.children && (
-        <div className=" w-auto flex-col gap-1 rounded-2xl bg-[#FFFEFB] dark:bg-zinc-950 py-3 transition-all ">
+        <div className=" w-auto flex-col flex-wrap gap-1 rounded-2xl bg-[#FFFEFB] dark:bg-zinc-950 py-3 transition-all ">
           {data.children.map((ch, index) => (
             <p
               key={index}
-              className="flex cursor-pointer items-center py-2 pl-6 pr-8 text-[#09090B99] dark:text-[#FAFAFA99] hover:text-zinc-950 dark:hover:text-[#FAFAFA]"
+              className="flex cursor-pointer items-center py-2 pl-5 text-[#09090B99] dark:text-[#FAFAFA99] hover:text-zinc-950 dark:hover:text-[#FAFAFA] text-sm flex-wrap"
             >
               <Link href={ch.link ?? "#"}>
                 <span className=" whitespace-nowrap pl-3">{ch.label}</span>
