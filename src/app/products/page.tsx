@@ -3,7 +3,9 @@ import mgps from "../../../public/mgps.jpeg";
 import icu from "../../../public/icu-ward-work.jpg";
 import modularOT from "../../../public/modular-ot.jpg";
 import psa from "../../../public/psa-oxigen.jpeg";
-import ncs from "../../../public/Nurse-Call-System.png" 
+import ncs from "../../../public/Nurse-Call-System.png";
+import interior from "../../../public/empty-hallway-background.jpg";
+import furniture from "../../../public/hospital-room-interior.jpg";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import Image, { StaticImageData } from "next/image";
 
@@ -18,9 +20,9 @@ type Product = {
 const products: Product[] = [
   {
     image: mgps,
-    name: "MGPS Products",
+    name: "Medical Gas Pipeline System",
     description:
-      "The Medical Gas Pipeline System is a key element of every hospital. The MGPS provides vital medical gases for patient ventilation and various clinical applications",
+      "The Medical Gas Pipeline System is a key element of every hospital. The MGPS provides vital medical gases for patient ventilation and various clinical applications.",
     button: "See all",
     icon: <MdOutlineArrowRightAlt />,
   },
@@ -28,7 +30,7 @@ const products: Product[] = [
     image: icu,
     name: "I.C.U, C.C.U, Ward Work",
     description:
-      "An intensive care unit (ICU) and a critical care unit (CCU) are both hospital wards that provide intensive care to patients with severe or life-threatening illnesses and injuries",
+      "An intensive care unit (ICU) and a critical care unit (CCU) are both hospital wards that provide intensive care to patients with severe or life-threatening illnesses and injuries.",
     button: "See all",
     icon: <MdOutlineArrowRightAlt />,
   },
@@ -44,7 +46,7 @@ const products: Product[] = [
     image: psa,
     name: "PSA Oxygen Generation Plant",
     description:
-      "PSA oxygen generation plant is a technology that uses pressurized vessels and zeolite to separate oxygen from other gases in compressed air to produce medical-grade oxygen",
+      "PSA oxygen generation plant is a technology that uses pressurized vessels and zeolite to separate oxygen from other gases in compressed air to produce medical-grade oxygen.",
     button: "See all",
     icon: <MdOutlineArrowRightAlt />,
   },
@@ -52,7 +54,23 @@ const products: Product[] = [
     image: ncs,
     name: "Nurse Call System",
     description:
-      "A nurse call system allows patients to easily communicate with nurses, ensuring that they receive timely assistance when they need it most",
+      "A nurse call system allows patients to easily communicate with nurses, ensuring that they receive timely assistance when they need it most.",
+    button: "See all",
+    icon: <MdOutlineArrowRightAlt />,
+  },
+  {
+    image: interior,
+    name: "Interior Work",
+    description:
+      "Innovative hospital interior design solutions that enhance functionality, safety, and aesthetics, creating comfortable and efficient spaces for patients and staff.",
+    button: "See all",
+    icon: <MdOutlineArrowRightAlt />,
+  },
+  {
+    image: furniture,
+    name: "Hospital Furniture",
+    description:
+      "High-quality, ergonomic hospital furniture designed for durability and comfort, enhancing patient care and creating efficient workspaces for healthcare professionals.",
     button: "See all",
     icon: <MdOutlineArrowRightAlt />,
   },
@@ -64,7 +82,7 @@ const page = () => {
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-zinc-950 bg-[#FFFEFB] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <div className="lg:mx-36 md:mx-10 mx-5 w-full mt-20 flex flex-col z-30 ">
         <h1 className="text-5xl text-center">Products</h1>
-        <div className="grid gap-7 md:grid-cols-3  place-items-center mt-5 mb-6 ">
+        <div className="grid gap-7 md:grid-cols-3  place-items-center sm:mt-10 mt-8 mb-6 ">
           {products.map((product, index) => (
             <div
               key={index}

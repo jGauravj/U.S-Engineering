@@ -23,15 +23,15 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-8 items-end w-full">
-          <button className="flex dark:text-neutral-300 text-zinc-900 mr-[4.5rem] justify-start items-center gap-2 px-8 py-3 border rounded-lg border-black/10 dark:border-white/10">
+        <div className="flex flex-col gap-8 sm:items-end mt-5 sm:mt-0 w-full">
+          <button className="flex w-full sm:w-auto justify-center dark:text-neutral-300 text-zinc-900 mr-[4.5rem] sm:justify-start items-center gap-2 px-8 py-3 border rounded-lg border-black/10 dark:border-white/10">
             <span>
               <FaRegEnvelope />
             </span>
             hello@landingfolio.com
           </button>
           <div className="flex">
-            <ul className="flex gap-10 text-base ">
+            <ul className="flex gap-10 text-base w-full justify-between sm:w-auto ">
               <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black font-normal">
                 Products
               </li>
