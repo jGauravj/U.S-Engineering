@@ -66,18 +66,17 @@
   }
 }
 
-
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;   
+    @apply bg-background text-foreground;
   }
 }
 
 @media (min-width: 540px) {
-  .hero-content{
+  .hero-content {
     margin-top: 24rem;
   }
 }

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className=" border-t border  pt-10 pb-3">
+    <div className=" border-t  pt-10 pb-3">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:mx-36 md:mx-10 mx-5 md:place-items-center">
         <div className="flex w-full justify-start gap-5 flex-col items-start ">
           <div className="flex items-center gap-2">
@@ -31,31 +31,31 @@ const Footer = () => {
             hello@landingfolio.com
           </button>
           <div className="flex">
-            <ul className="flex gap-10 text-base w-full justify-between sm:w-auto ">
-              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black font-normal">
+            <ul className="flex gap-10 text-base w-full justify-between sm:w-auto flex-wrap">
+              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black font-normal sm:text-base text-sm">
                 Products
               </li>
-              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black">
+              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black sm:text-base text-sm">
                 About
               </li>
-              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black ">
+              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black sm:text-base text-sm">
                 Contact
               </li>
-              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black">
+              <li className=" cursor-pointer hover:-translate-y-1 transition-all text-zinc-400 dark:text-neutral-500 dark:hover:text-white hover:text-black sm:text-base text-sm">
                 Career
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div className="lg:mx-36 md:mx-10 mx-5 flex justify-between items-center mt-5">
-        <p className="text-xs dark:text-neutral-400 text-zinc-900">
-          © 2024 US Engineering. All Rights Reserved.
-        </p>
-        <p className="text-xs dark:text-neutral-400 text-zinc-900">
+      <div className="lg:mx-36 md:mx-10 mx-5 felx-col sm:flex-row sm:flex sm:justify-between items-center mt-5">
+        <p className="text-xs dark:text-neutral-400 text-zinc-900 text-center">
           <Link href="https://gauravjangir.vercel.app/">
             Designed by Gaurav Jangir
           </Link>
+        </p>
+        <p className="text-xs dark:text-neutral-400 text-zinc-900  text-center">
+          © 2024 US Engineering. All Rights Reserved.
         </p>
       </div>
     </div>

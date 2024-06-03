@@ -24,31 +24,31 @@ const navItem: NavItem[] = [
     children: [
       {
         label: "Medical Gas Pipeline System",
-        link: "#",
+        link: "/products/mgps",
       },
       {
         label: "I.C.U, C.C.U, Ward Work",
-        link: "#",
+        link: "/products/icuwardwork",
       },
       {
         label: "Modualr Operation Theater",
-        link: "#",
+        link: "/products/modualroperationtheater",
       },
       {
         label: "PSA Oxygen Generation Plant",
-        link: "#",
+        link: "/products/psaoxygen",
       },
       {
         label: "Nurse Call System",
-        link: "#",
+        link: "/products/nursecallsystem",
       },
       {
         label: "Interior Work",
-        link: "#",
+        link: "/products/interiorwork",
       },
       {
         label: "Hospital Furniture",
-        link: "#",
+        link: "/products/furniture",
       },
     ],
   },
