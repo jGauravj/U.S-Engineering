@@ -1,33 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { VscDash } from "react-icons/vsc";
 import { MdOutlineFileDownload } from "react-icons/md";
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "../productsData";
-import { useState } from "react";
 
-interface InformationDetail {
-  feature: string;
-  detail: string;
-}
-const info: InformationDetail[] = [
-  { feature: "Feature 1", detail: "Detail 1" },
-  { feature: "Feature 2", detail: "Detail 2" },
-  // Add more items as needed
-];
-
-const ProductDetail = ({ params }: { params: { id: string } }) => {
+const ProductDetailPage = ({ params }: { params: { id: string } }) => {
   const product = products.find((p) => p.id === params.id);
 
-  const initialImages = product.productDetail.reduce((acc, curr) => {
-    acc[curr.id] = curr.mainImage;
-    return acc;
-  }, {} as Record<number, StaticImageData | string>);
+  const initialImages = product
+    ? product.productDetail.reduce((acc, curr) => {
+        acc[curr.id] = curr.mainImage;
+        return acc;
+      }, {} as Record<number, StaticImageData | string>)
+    : {};
 
-  const [selectedImage, setSelectedImage] = useState(initialImages);
+  const [selectedImage, setSelectedImage] =
+    useState<Record<number, StaticImageData | string>>(initialImages);
 
   if (!product) {
     return notFound();
@@ -37,10 +28,10 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
     id: number,
     thumbnail: StaticImageData | string
   ) => {
-    setSelectedImage({
-      ...selectedImage,
+    setSelectedImage((prevSelectedImage) => ({
+      ...prevSelectedImage,
       [id]: thumbnail,
-    });
+    }));
   };
 
   return (
@@ -68,7 +59,7 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
                 {productDet.thumbnails.map((thumbnail, index) => (
                   <div
                     key={index}
-                    className="sm:h-[6rem] sm:w-[6rem] h-[3rem] w-[3rem] rounded-xl "
+                    className="sm:h-[6rem] sm:w-[6rem] h-[3rem] w-[3rem] rounded-xl"
                     onClick={() =>
                       handleThumbnailClick(productDet.id, thumbnail)
                     }
@@ -81,8 +72,8 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
                   </div>
                 ))}
               </div>
-              <div className="w-full flex justify-center border py-2 rounded-lg items-center ring-orange-500 ring-1 hover:ring-2 ">
-                <button className="flex items-center gap-2 sm:text-base text-sm ">
+              <div className="w-full flex justify-center border py-2 rounded-lg items-center ring-orange-500 ring-1 hover:ring-2">
+                <button className="flex items-center gap-2 sm:text-base text-sm">
                   Info & Catalogue
                   <span>
                     <MdOutlineFileDownload />
@@ -93,7 +84,9 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
             <div className="flex flex-col gap-2 right-div w-full">
               <div className="rounded-lg flex flex-col w-full">
                 <div className="border rounded-lg py-3 pl-5">
-                  <h1 className="text-base text-zinc-900 dark:text-neutral-100">{productDet.name}</h1>
+                  <h1 className="text-base text-zinc-900 dark:text-neutral-100">
+                    {productDet.name}
+                  </h1>
                 </div>
                 <div className="flex flex-col gap-2 mt-4">
                   <h1 className="text-lg text-zinc-900 dark:text-neutral-100">
@@ -104,7 +97,7 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
                       {productDet.features.map((feature, index) => (
                         <li
                           key={index}
-                          className="flex items-center gap-3 text-zinc-600 dark:text-neutral-300 sm:text-base text-sm "
+                          className="flex items-center gap-3 text-zinc-600 dark:text-neutral-300 sm:text-base text-sm"
                         >
                           <span>
                             <VscDash />
@@ -120,9 +113,9 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
                 <h1 className="text-lg text-zinc-900 dark:text-neutral-100">
                   Technical Information
                 </h1>
-                <div className=" border rounded-lg ">
+                <div className="border rounded-lg">
                   {productDet.information.map((info, index) => (
-                    <table key={index} className="w-full table-auto p-3 ">
+                    <table key={index} className="w-full table-auto p-3">
                       <tbody>
                         <tr
                           className={
@@ -151,4 +144,4 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
   );
 };
 
-export default ProductDetail;
+export default ProductDetailPage;
