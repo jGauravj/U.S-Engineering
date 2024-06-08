@@ -15,12 +15,9 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    console.log("Gmail:", process.env.NEXT_PUBLIC_GMAIL_USER);
-    console.log("pass:", process.env.NEXT_PUBLIC_GMAIL_PASS);
-
     const mailOptions = {
       from: process.env.NEXT_PUBLIC_GMAIL_USER,
-      to: "gouraw1@gmail.com",
+      to: "usengineeringcareer@gmail.com",
       subject: `New Inquiry from ${firstName} via Contact Form`,
       text: `First Name: ${firstName}\nEmail: ${email}\nMessage: ${message}`,
     };
