@@ -13,6 +13,19 @@ export async function POST(request: NextRequest) {
       },
     });
 
+    console.log(
+      "GMAIL_USER:",
+      process.env.GMAIL_USER
+        ? process.env.GMAIL_USER.slice(0, 3) + "..."
+        : "not set"
+    );
+    console.log(
+      "GMAIL_PASS:",
+      process.env.GMAIL_PASS
+        ? process.env.GMAIL_PASS.slice(0, 3) + "..."
+        : "not set"
+    );
+
     const mailOptions = {
       from: process.env.GMAIL_USER,
       to: "gouraw1@gmail.com",
