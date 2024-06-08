@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
         {isLoading && <Loader />}
         <div className="grid md:grid-cols-2 grid-cols-1 w-full gap-5 mt-24 ">
           <div className="border rounded-lg border-black/15 dark:border-white/15 p-5 flex flex-col gap-6">
-            <h1 className="text-3xl text-zinc-900 dark:text-neutral-100">
+            <h1 className="text-3xl text-zinc-950 dark:text-neutral-100">
               Contact Us
             </h1>
             <div className="flex flex-col gap-1">
