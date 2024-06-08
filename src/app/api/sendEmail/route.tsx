@@ -10,16 +10,16 @@ export async function POST(request: NextRequest) {
       port: 465,
       secure: true, // true for port 465, false for other ports
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASS,
+        user: process.env.NEXT_PUBLIC_GMAIL_USER,
+        pass: process.env.NEXT_PUBLIC_GMAIL_PASS,
       },
     });
 
-    console.log("Gmail:", process.env.GMAIL_USER);
-    console.log("pass:", process.env.GMAIL_PASS);
+    console.log("Gmail:", process.env.NEXT_PUBLIC_GMAIL_USER);
+    console.log("pass:", process.env.NEXT_PUBLIC_GMAIL_PASS);
 
     const mailOptions = {
-      from: process.env.GMAIL_USER,
+      from: process.env.NEXT_PUBLIC_GMAIL_USER,
       to: "gouraw1@gmail.com",
       subject: `New Inquiry from ${firstName} via Contact Form`,
       text: `First Name: ${firstName}\nEmail: ${email}\nMessage: ${message}`,
