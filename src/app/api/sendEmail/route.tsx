@@ -8,26 +8,16 @@ export async function POST(request: NextRequest) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.NEXT_PUBLIC_GMAIL_USER,
-        pass: process.env.NEXT_PUBLIC_GMAIL_PASS,
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS,
       },
     });
 
-    console.log(
-      "GMAIL_USER:",
-      process.env.NEXT_PUBLIC_GMAIL_USER
-        ? process.env.NEXT_PUBLIC_GMAIL_USER.slice(0, 3) + "..."
-        : "not set"
-    );
-    console.log(
-      "GMAIL_PASS:",
-      process.env.NEXT_PUBLIC_GMAIL_PASS
-        ? process.env.NEXT_PUBLIC_GMAIL_PASS.slice(0, 3) + "..."
-        : "not set"
-    );
+    console.log("Gmail:", process.env.GMAIL_USER);
+    console.log("pass:", process.env.GMAIL_PASS);
 
     const mailOptions = {
-      from: process.env.NEXT_PUBLIC_GMAIL_USER,
+      from: process.env.GMAIL_USER,
       to: "gouraw1@gmail.com",
       subject: `New Inquiry from ${firstName} via Contact Form`,
       text: `First Name: ${firstName}\nEmail: ${email}\nMessage: ${message}`,
