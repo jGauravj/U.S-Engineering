@@ -19,7 +19,7 @@ type NavItem = {
 
 const navItem: NavItem[] = [
   {
-    label: "Products",
+    label: "Products & Services",
     link: "/products",
     children: [
       {
@@ -28,11 +28,11 @@ const navItem: NavItem[] = [
       },
       {
         label: "I.C.U, C.C.U, Ward Work",
-        link: "/products/icuwardwork",
+        link: "/products/icuwork",
       },
       {
         label: "Modualr Operation Theater",
-        link: "/products/modualroperationtheater",
+        link: "/products/modularOt",
       },
       {
         label: "PSA Oxygen Generation Plant",
@@ -40,11 +40,11 @@ const navItem: NavItem[] = [
       },
       {
         label: "Nurse Call System",
-        link: "/products/nursecallsystem",
+        link: "/products/nurse-call-system",
       },
       {
         label: "Interior Work",
-        link: "/products/interiorwork",
+        link: "/products/interior",
       },
       {
         label: "Hospital Furniture",
@@ -53,38 +53,16 @@ const navItem: NavItem[] = [
     ],
   },
   {
-    label: "Service",
-    link: "#",
-    children: [
-      {
-        label: "Todo list",
-        link: "#",
-      },
-      {
-        label: "Gas piple",
-        link: "#",
-      },
-      {
-        label: "OPD",
-        link: "#",
-      },
-      {
-        label: "Much more",
-        link: "#",
-      },
-    ],
-  },
-  {
     label: "About",
-    link: "#",
+    link: "/about",
   },
   {
     label: "Contact",
-    link: "#",
+    link: "/contact",
   },
   {
     label: "Career",
-    link: "#",
+    link: "/career",
   },
 ];
 

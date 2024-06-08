@@ -96,7 +96,10 @@ export const products: Product[] = [
           "Pressure unit display option - bar, psi & kg/cm²",
           "Optimization of residual gas in cylinders", 
           "HMI Based LCD",
-          "High visible 7 (178 mm ) LCD screen"
+          "High visible 7 (178 mm ) LCD screen",
+          "Touch screen operation",
+          "Real time alarm updating of status SMS & E-Mail",
+          "Audio mute option"
         ],
         information: [
           {
@@ -148,55 +151,44 @@ export const products: Product[] = [
         thumbnails: [mgps, psa, ncs, modularOT],
         features: [
           "Logic-controlled auto change-over",
-          "Constant uninterrupted supply",
-          "High flow output - 2100 lpm @ 4.2 bar",
-          "Stable discharge pressure & flow",
+          "An interface between two sources",
+          "One of the source as default setting (Source 1)",
+          "Setting of other source as default is possible",
           "Visual & audible signal",
           "Pressure unit display option - bar, psi & kg/cm²",
-          "Optimization of residual gas in cylinders", 
+          "Constant uninterrupted supply", 
         ],
         information: [  
           {
             feature: "Flow rate",
-            detail: "2100 Ipm",
+            detail: "3000 Ipm",
           },
           {
             feature: "Inlet Pressure",
-            detail: "20-149 bar (290-2161 psi)",
+            detail: "4 - 4.2 bar (60 - 61 psi)",
           },
           {
-            feature: "Pressure at Primary regulator discharge",
-            detail: "10-12 bar (145-174 psi)",
+            feature: "Outlet Pressure",
+            detail: "4 - 4.2 bar (60 - 61 psi)",
           },
           {
-            feature: "Pressure at Secondary regulator discharge",
-            detail: "4.2 bar (61 psi)",
-          },
-          {
-            feature: "Inlet connection",
+            feature: "Inlet connection ",
             detail: "1 BSP",
-          },
-          {
-            feature: "Manifold header connection ",
-            detail: "1/2 BSP",
-          },
-          {
-            feature: "High pressure regulator relief valve setting",
-            detail: "15.5 bar (225 psi)",
-          },
-          {
-            feature: "Line pressure relief valve setting ",
-            detail: "5.17 bar (75 psi)",
           },
           {
             feature: "Incoming voltage",
             detail: "220V AC",
           },
+          {
+            feature: "Working voltage ",
+            detail: "24V DC",
+          },
+
         ],
       },
       {
         id: 4,
-        name: "Changeover Unit",
+        name: "Source Changeover Unit",
         mainImage: mgps,
         thumbnails: [mgps, psa, ncs, modularOT],
         features: [
@@ -233,7 +225,63 @@ export const products: Product[] = [
             feature: "Working voltage ",
             detail: "24V DC",
           },
-
+        ],
+      },
+      {
+        id: 5,
+        name: "Zonal Valve Box / Area Valve Service Unit (AVSU)",
+        mainImage: mgps,
+        thumbnails: [mgps, psa, ncs, modularOT],
+        features: [
+          "Fully isolate area in emergency, maintenance, extension etc",
+          "Valves housed in secured metallic box",
+          "Full bore ball valves are medical compatible and comply with Pressure Equipment Directive 97/23/EC",
+          "Flared tube ends for easy insertion of connecting tube",
+          "Stub ends covered for dust protection",
+          "Acrylic window for clear visibility of in-line pressure reading",
+          "Window breakable in case of emergency", 
+        ],
+        information: [  
+          {
+            feature: "Conforms to ",
+            detail: "3000 Ipm",
+          },
+          {
+            feature: "Flow rate @ 4.2 bar (max.) ",
+            detail: "4 - 4.2 bar (60 - 61 psi)",
+          },
+          {
+            feature: "Maximum Pressure",
+            detail: "4 - 4.2 bar (60 - 61 psi)",
+          },
+          {
+            feature: "OD of Stub end ",
+            detail: "1 BSP",
+          },
+          {
+            feature: "Length of Stub end ",
+            detail: "220V AC",
+          },
+          {
+            feature: "Tighten proof",
+            detail: "24V DC",
+          },
+          {
+            feature: "Closing / Opening of Valve ",
+            detail: "24V DC",
+          },
+          {
+            feature: "Working Temperature",
+            detail: "24V DC",
+          },
+          {
+            feature: "Gases",
+            detail: "24V DC",
+          },
+          {
+            feature: "Regulatory Status",
+            detail: "24V DC",
+          },
         ],
       },
     ],
@@ -286,7 +334,7 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "modulatot",
+    id: "modularOt",
     image: modularOT,
     name: "Modualr Operation Theater",
     description:

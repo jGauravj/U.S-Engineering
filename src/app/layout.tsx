@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -32,10 +32,10 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Toaster />
           <Footer />
         </ThemeProvider>
       </body>
-      
     </html>
   );
 }
