@@ -1,5 +1,6 @@
 import React from "react";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
+import Link from "next/link";
 
 const Offer = () => {
   type OfferSection = {
@@ -8,6 +9,7 @@ const Offer = () => {
     para: string;
     button: string;
     icon: JSX.Element;
+    link: string;
   };
 
   const offerItem: OfferSection[] = [
@@ -17,6 +19,7 @@ const Offer = () => {
       para: "Specialized interior design services crafted for hospitals and healthcare facilities, creating inviting and efficient spaces for healing and comfort.",
       button: "Read more",
       icon: <MdOutlineArrowRightAlt />,
+      link: "/products/interior",
     },
     {
       name: "Medical Gas Pipeline",
@@ -24,6 +27,7 @@ const Offer = () => {
       para: "Medical Gas Pipeline System (MGPS) is installed to provide a safe, convenient and cost-effective system for provision of medical gases to the clinical and nursing staff at the point-of-use for patients. ",
       button: "Read more",
       icon: <MdOutlineArrowRightAlt />,
+      link: "/products/mgps",
     },
     {
       name: "Modular Operation Theatre",
@@ -31,6 +35,7 @@ const Offer = () => {
       para: "Modular operation theaters are operation theaters that are built inside a hospital with metal and glass ceilings and walls to provide the patient with the optimum position for the operation. ",
       button: "Read more",
       icon: <MdOutlineArrowRightAlt />,
+      link: "/products/modularOt",
     },
     {
       name: "PSA Oxygen Plant",
@@ -38,6 +43,7 @@ const Offer = () => {
       para: "Our Pressure Swing Adsorption (PSA) Oxygen Generation Plant ensures a reliable and continuous supply of medical-grade oxygen, vital for patient care in hospitals.",
       button: "Read more",
       icon: <MdOutlineArrowRightAlt />,
+      link: "/products/psaoxygen",
     },
     {
       name: "Nurse Call System",
@@ -45,6 +51,7 @@ const Offer = () => {
       para: "Our Nurse Call System ensures efficient communication between patients and staff, enabling timely assistance and enhancing the overall quality of care",
       button: "Read more",
       icon: <MdOutlineArrowRightAlt />,
+      link: "/products/nurse-call-system",
     },
     {
       name: "Modular ICU & ICCU",
@@ -52,14 +59,16 @@ const Offer = () => {
       para: " Our Modular ICU & ICCU units provide advanced care environments, promoting healing and comfort for patients in critical conditions. ",
       button: "Read more",
       icon: <MdOutlineArrowRightAlt />,
+      link: "/products/icuwork",
     },
-    
   ];
 
   return (
     <div className="flex flex-col mt-[7rem] lg:mt-[16rem] gap-16 sm:gap-20 lg:mx-36 md:mx-10 mx-5">
       <div className="text-center">
-        <h1 className="lg:text-6xl md:text-5xl text-5xl sm:4xl dark:text-neutral-100 text-zinc-900">What We Offer</h1>
+        <h1 className="lg:text-6xl md:text-5xl text-5xl sm:4xl dark:text-neutral-100 text-zinc-900">
+          What We Offer
+        </h1>
       </div>
       <div className="grid lg:grid-cols-3 sm:grid-cols-2  w-full">
         {offerItem.map((data, index) => (
@@ -78,7 +87,7 @@ const Offer = () => {
             </p>
             <div className="group mt-auto ">
               <button className="flex items-center gap-2 mt-5 text-zinc-600 dark:text-neutral-300 group-hover:text-zinc-900 dark:group-hover:text-[#FAFAFA]">
-                {data.button}
+                <Link href={data.link}>{data.button}</Link>
                 <span className=" group-hover:translate-x-1 transition-all group-hover:text-base ">
                   {data.icon}
                 </span>

@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="lg:mx-36 md:mx-10 mx-5 felx-col sm:flex-row sm:flex sm:justify-between items-center mt-5">
-        <p className="text-xs dark:text-neutral-400 text-zinc-700 text-center">
+        <p className="text-xs dark:text-neutral-400 text-zinc-700 text-center flex justify-center">
           <span className="flex items-center gap-1">
             <Link href="https://gauravjangir.vercel.app/">
               Designed by Gaurav Jangir
