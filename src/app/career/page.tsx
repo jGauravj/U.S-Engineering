@@ -20,12 +20,7 @@ const page = () => {
             Career
           </h1>
           <p className="text-center sm:w-3/4 dark:text-neutral-300 text-zinc-600">
-            Since our establishment in 2010, we have been dedicated to
-            transforming healthcare facilities with innovative design and
-            exceptional service. Our commitment to excellence and quality has
-            made us a trusted partner in the healthcare industry, continually
-            striving to enhance the functionality and aesthetics of medical
-            environments.
+          At U.S Engineering, we value innovation, collaboration, and professional growth. Our team is dedicated to making a positive impact in healthcare environments, and we are looking for passionate and talented individuals to join us.
           </p>
           <div className="md:h-[35rem]  w-full sm:mt-16 mt-10">
             <Image
