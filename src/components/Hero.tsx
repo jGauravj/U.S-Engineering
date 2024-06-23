@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import HeroImg from "../../public/hero-img.jpg";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -14,7 +15,7 @@ const Hero = () => {
           />
         </div>
         <div className=" hero-content flex flex-col sm:justify-center mt-[21.5rem] sm:mt-0 lg:ml-36 md:ml-10 mx-5">
-          <h1 className=" w-full lg:text-6xl md:text-5xl text-5xl font-light leading-tight  sm:4xl dark:text-neutral-100 text-zinc-900 ">
+          <h1 className=" w-full lg:text-6xl md:text-5xl text-5xl leading-tight  sm:4xl dark:text-neutral-100 text-zinc-900 ">
             U.S. Engineering Where Quality Meets Precision
           </h1>
           <p className="sm:text-base    text-zinc-600 dark:text-neutral-300 mt-5">
@@ -22,12 +23,17 @@ const Hero = () => {
             facility with our expert interior design and equipment services,
             meeting U.S., UK, German, Turkish, and Italian standards.
           </p>
-          <div className="flex  gap-3 mt-7">
+          <div className="flex  gap-5 mt-7">
             <button className="md:px-8 py-3 sm:px-4 px-6  bg-blue-600 active:bg-blue-700 hover:bg-blue-600 rounded-xl text-[#FAFAFA] ">
-              Get in touch
+              <Link
+                href={"mailto:usengineeringcareer@gmail.com"}
+                target="_blank"
+              >
+                Get in touch
+              </Link>
             </button>
-            <button className="md:px-8 sm:px-4 px-6 py-3  active:bg-blue-700 hover:bg-blue-600 hover:text-[#FAFAFA] rounded-xl text-zinc-500 ">
-              See our product
+            <button className="md:px-8 sm:px-4 px-6 py-3 border border-blue-500/40  text-blue-500 hover:text-blue-600 hover:border-blue-600 transition-all rounded-xl ">
+              <Link href="/products">See our product</Link>
             </button>
           </div>
         </div>

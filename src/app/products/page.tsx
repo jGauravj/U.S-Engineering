@@ -5,10 +5,20 @@ import { MdOutlineArrowRightAlt } from "react-icons/md";
 
 const page = () => {
   return (
-    <div className="min-h-screen  w-full dark:bg-zinc-950 bg-[#FFFEFB] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex">
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-zinc-950 bg-[#FFFEFB] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-      <div className="lg:mx-36 md:mx-10 mx-5 w-full mt-20 flex flex-col z-30 ">
-        <h1 className="text-5xl text-center">Products</h1>
+    <div className="min-h-screen  w-full dark:bg-zinc-950 bg-[#FFFEFB] flex mb-16">
+      <div className="h-[30rem] z-10  -top-4 w-full dark:bg-zinc-950 bg-[#FFFEFB] dark:bg-grid-white/[0.2] bg-grid-black/[0.2] absolute">
+        <div className="h-10 xl:h-32 bg-gradient-to-t from-[#FFFEFB] dark:bg-gradient-to-t dark:from-zinc-950 absolute -bottom-5 left-0 xl:bottom-0 w-full z-10"></div>
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-zinc-950 bg-[#FFFEFB] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      </div>
+      <div className="lg:mx-36 md:mx-10 mx-5 w-full mt-28 flex flex-col z-30 ">
+        <div className=" flex flex-col items-center gap-3">
+          <h1 className="bg-zinc-200 dark:bg-zinc-600 text-xs py-0.5 px-2 rounded-md">
+            Product
+          </h1>
+          <h1 className="text-3xl text-center font-medium dark:text-neutral-100 text-zinc-900">
+            Products
+          </h1>
+        </div>
         <div className="grid gap-7 md:grid-cols-3  place-items-center sm:mt-10 mt-8 mb-6 ">
           {products.map((product) => (
             <div

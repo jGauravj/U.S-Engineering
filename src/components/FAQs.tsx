@@ -3,7 +3,7 @@ import Accordion from "./Accordion";
 
 const FAQs = () => {
   return (
-    <div className="  ">
+    <div>
       <Accordion
         title="What services does your company provide for healthcare facilities?"
         answer="We specialize in hospital interior design, installation, and maintenance of gas pipeline systems, and supply of high-quality hospital equipment including beds, chairs, and lights. We also offer modular operation theater equipment and comprehensive service solutions tailored to meet the specific needs of healthcare environments."

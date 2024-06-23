@@ -81,7 +81,7 @@ const Navbar = () => {
       >
         <div>
           <h1 className=" text-base font-medium text-zinc-950 dark:text-[#FAFAFA]">
-            U.S. Engineering
+            <Link href="/" >U.S. Engineering</Link>
           </h1>
         </div>
 

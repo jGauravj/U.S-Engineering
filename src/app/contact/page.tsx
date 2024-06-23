@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
         toast({
           title: "Yeah!",
           description: "Your message has been send",
-          variant: "success"
+          variant: "success",
         });
       } else {
         const errorData = await response.json();
@@ -78,11 +78,23 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <div className="lg:mx-36 md:mx-10 mx-5 flex flex-col gap-6 justify-center">
+    <div className="min-h-screen z-30 mb-16">
+      <div className="h-[30rem] -z-10  -top-4 w-full dark:bg-zinc-950 bg-[#FFFEFB] dark:bg-grid-white/[0.2] bg-grid-black/[0.2] absolute">
+        <div className="h-10 xl:h-32 bg-gradient-to-t from-[#FFFEFB] dark:bg-gradient-to-t dark:from-zinc-950 absolute -bottom-5 left-0 xl:bottom-0 w-full z-10"></div>
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-zinc-950 bg-[#FFFEFB] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      </div>
+      <div className="lg:mx-36 z-30 md:mx-10 mx-5 flex flex-col gap-10 justify-center mt-28">
+        <div className=" flex flex-col items-center gap-3">
+          <h1 className="bg-zinc-200 dark:bg-zinc-600 text-xs py-0.5 px-2 rounded-md">
+            Contact
+          </h1>
+          <h1 className="text-3xl text-center font-medium dark:text-neutral-100 text-zinc-900">
+            Contact
+          </h1>
+        </div>
         {isLoading && <Loader />}
-        <div className="grid md:grid-cols-2 grid-cols-1 w-full gap-5 mt-24 ">
-          <div className="border rounded-lg border-black/15 dark:border-white/15 p-5 flex flex-col gap-6">
+        <div className="grid md:grid-cols-2 grid-cols-1 w-full gap-5  ">
+          <div className="border rounded-lg border-black/15 dark:border-white/15 p-5 flex flex-col gap-6 bg-[#FFFEFB] dark:bg-zinc-950">
             <h1 className="text-3xl text-zinc-950 dark:text-neutral-100">
               Contact Us
             </h1>
@@ -112,7 +124,7 @@ const Contact: React.FC = () => {
 
           <form
             onSubmit={onSubmit}
-            className=" flex w-full flex-col gap-3 border p-6 rounded-lg dark:border-white/15 border-black/15"
+            className=" flex w-full flex-col gap-3 border p-6 rounded-lg dark:border-white/15 border-black/15 bg-[#FFFEFB] dark:bg-zinc-950"
           >
             <div className="flex flex-col gap-1.5">
               <label className="text-sm text-zinc-950 dark:text-neutral-100">
