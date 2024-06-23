@@ -18,7 +18,7 @@ const CareerContent: React.FC = () => {
     <div className="flex flex-col gap-8 ">
       {jobsData.map((job) => (
         <div key={job.id} className=" p-4 border rounded-lg relative ">
-          <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 sm:gap-0 flex-wrap">
+          <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 sm:gap-0 flex-wrap mb-2">
             <div className="flex flex-col gap-3">
               <div className="flex gap-2 items-center">
                 <div className="px-2 py-1 rounded-lg bg-blue-100">
@@ -55,11 +55,11 @@ const CareerContent: React.FC = () => {
           <div
             className={` overflow-auto transition-all duration-700 ease-in-out ${
               expandedJobId === job.id
-                ? " md:max-h-[50rem] lg:max-h-screen  opacity-100"
+                ? " max-h-screen  opacity-100"
                 : "max-h-0 opacity-0"
             }  `}
           >
-            <div className="mt-5 overflow-hidden">
+            <div className="mt-3 overflow-hidden">
               <h1 className="text-xl font-medium text-zinc-900 dark:text-neutral-100">
                 Job Description
               </h1>
